@@ -1,0 +1,424 @@
+body {
+    animation: backGroundChange 20s infinite;
+}
+
+@keyframes backGroundChange {
+    0% {
+        background-color: #ffffff;
+    }
+
+    5% {
+        background-color: #e4e4ff;
+    }
+
+    30% {
+        background-color: #d2d2ff;
+    }
+
+    50% {
+        background-color: #c9c9ff;
+    }
+
+    80% {
+        background-color: #d2d2ff;
+    }
+
+    95% {
+        background-color: #e4e4ff;
+    }
+
+    100% {
+        background-color: #ffffff;
+    }
+}
+
+@keyframes HelloTitleChange {
+    0% {
+        font-size: 0%;
+        color: rgb(255, 255, 255);
+    }
+
+    25% {
+        font-size: 96px;
+        color: rgba(0, 0, 255, 1);
+    }
+
+    75% {
+        font-size: 96px;
+        color: rgba(0, 0, 255, 1);
+    }
+
+    100% {
+        font-size: 50px;
+        color: rgba(201, 201, 255, 0);
+    }
+}
+
+@keyframes HelloTitleCenterChange {
+    0% {
+        top: 50%;
+    }
+
+    25% {
+        top: 50%;
+    }
+
+    75% {
+        top: 50%;
+    }
+
+    100% {
+        top: 20%;
+    }
+}
+
+@keyframes HelloTitlebgChange {
+    0% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#HelloTitil {
+    animation: HelloTitleChange 3s;
+    /* position: absolute; */
+    /* top: 20%; */
+    /* left: 50%; */
+    text-align: center;
+    font-size: 50px;
+    color: #9c9cff;
+    white-space: nowrap;
+    padding: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+
+#center {
+    top: 20%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100px;
+    animation: HelloTitleCenterChange 3s;
+}
+
+#centerBackground {
+    animation: HelloTitlebgChange 3s;
+    opacity: 1;
+    background-image: linear-gradient(135deg, #a74afd 20%, #0000ff 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    border-radius: 60px;
+}
+
+@keyframes linkBoxChange {
+    0% {
+        opacity: 0.0;
+        top: 60%;
+    }
+
+    62.5% {
+        opacity: 0.0;
+        top: 60%;
+    }
+
+    75% {
+        opacity: 1.0;
+        top: 45%;
+    }
+
+    100% {
+        opacity: 1.0;
+        top: 45%;
+    }
+}
+
+#mainLinkBox {
+    animation: linkBoxChange 4s;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+p.linkContent {
+    text-align: center;
+    word-wrap: break-word;
+    word-break: break-all;
+    z-index: 1;
+    position: relative;
+}
+
+.linkGroup:hover,
+.linkGroup:focus,
+.linkGroup:active {
+    transform: scale(1.1);
+}
+
+.linkGroup .linkGrouphover {
+    background-image: linear-gradient(315deg, #faaeed 10%, #e85ff5 100%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.34, 0.25, 0.23, 1.03);
+}
+
+.linkGroup:hover .linkGrouphover,
+.linkGroup:focus .linkGrouphover,
+.linkGroup:active .linkGrouphover {
+    opacity: 1;
+}
+
+.linkGroup {
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+
+    float: left;
+    margin: 10px;
+    /* padding: 30px; */
+    /* padding-right: 60px; */
+    /* padding-left: 60px; */
+    background-image: linear-gradient(135deg, #72b4f2 10%, #8585fd 100%);
+    width: 300px;
+    height: 150px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+h2.linkTitle {
+    text-align: center;
+    font-size: 36px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+}
+
+#linkLine {
+    width: 640px;
+}
+
+#linkLine>a {
+    color: #000000;
+}
+
+@keyframes wavesChange {
+    0% {
+        opacity: 0.0;
+        bottom: -50%;
+    }
+
+    62.5% {
+        opacity: 0.0;
+        bottom: -50%;
+    }
+
+    75% {
+        opacity: 1.0;
+        bottom: 0%;
+    }
+
+    100% {
+        opacity: 1.0;
+        bottom: 00%;
+    }
+}
+
+#waves {
+    animation: wavesChange 4s;
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    left: 0;
+}
+
+::-webkit-scrollbar {
+
+    width: 12px;
+
+    height: 12px;
+
+}
+
+::-webkit-scrollbar-track-piece {
+
+    background-color: transparent;
+
+    -webkit-border-radius: 6px;
+
+}
+
+::-webkit-scrollbar-thumb:vertical {
+
+    height: 12px;
+
+    background-color: #BDBDBD;
+
+    -webkit-border-radius: 6px;
+
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+
+    width: 12px;
+
+    background-color: #BDBDBD;
+
+    -webkit-border-radius: 6px;
+
+}
+
+::-webkit-scrollbar-thumb:vertical:hover,
+::-webkit-scrollbar-thumb:horizontal:hover {
+
+    background-color: #808080;
+
+}
+
+
+@keyframes poemBoxChange {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes poemChange {
+    0% {
+        pointer-events: none;
+    }
+
+    100% {
+        pointer-events: none;
+    }
+}
+#poemBox:hover #poem{
+    opacity: 1;
+}#poemBox:hover{
+    top: -30%;
+    width: 100%;
+    height: 280%;
+}
+#poemBox{
+    -webkit-transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.34, 0.25, 0.23, 1.03);
+    transition-duration: 0.5s;
+    height: 100%;
+    width: 100%;
+    /* position: relative; */
+    animation: poemBoxChange 3s;
+    opacity:unset;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    border-radius: 60px;
+}
+div#poem {
+
+animation: poemChange 3s;
+
+transition-timing-function: cubic-bezier(0.34, 0.25, 0.23, 1.03);
+
+/* overflow: hidden; */
+
+min-width: 100%;
+
+min-height: 100%;
+
+max-height: max-content;
+
+-webkit-transition-duration: 0.5s;
+
+transition-duration: 0.5s;
+
+/* position: absolute; */
+
+top: 50%;
+
+left: 50%;
+
+transform: translate(-50%, -50%);
+
+border-radius: 60px;
+
+position: relative;
+
+z-index: 10;
+
+opacity: 0;
+
+background-image: linear-gradient(135deg, #C2FFD8 10%, #465EFB 100%);
+}
+
+
+p#poemtext {
+    font-size: 24px;
+    text-align: center;
+    white-space: normal;
+    color: #3d0000;
+    /* position: absolute; */
+    padding-top: 10px;
+}
+
+@supports (-webkit-background-clip: text) {
+    #HelloTitil {
+        animation: HelloTitleChange 3s;
+        /* position: absolute; */
+        /* top: 20%; */
+        /* left: 50%; */
+        text-align: center;
+        font-size: 50px;
+        color: rgba(0, 0, 255, 0);
+        white-space: nowrap;
+        padding: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin: 0;
+        /* border-radius: 60px; */
+        /* opacity: 1; */
+        position: relative;
+        z-index: 1;
+        background-image: linear-gradient(135deg, #c0c0ff 10%, #9c9cff 100%);
+        /* color: transparent; */
+        -webkit-background-clip: text;
+    }
+
+    p#poemtext {
+        -webkit-background-clip: text;
+        color: rgba(0, 0, 0, 0);
+        background-image: linear-gradient(135deg, #a9413b 10%, #160d48 100%);
+        /* transform: translate(-50% ,-50%); */
+        /* top: 50%; */
+        /* left: 50%; */
+        /* position: absolute; */
+        white-space: nowrap;
+        z-index: 10;
+        position: relative;
+    }
+}

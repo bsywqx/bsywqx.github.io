@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>赞助</title>
+    <link href="./logo.ico" rel="icon">
+    <link rel="stylesheet" href="./blogs.css">
+    <link rel="stylesheet" href="./font-icos.css">
+    <link rel="stylesheet" href="./nav.css">
+    <script>
+        var canvas
+        var context
+        var chatIndex
+        function getRandomChar(){
+            const str="0123456789abcdefghijklmnopqrstuvwxyz"
+            return str[Math.floor(Math.random()*str.length)]
+        }
+        function draw(){
+            context.fillStyle = "rgba(181,181,255,0.15)"
+            context.fillRect(0, 0, canvas.width, canvas.height)
+            context.font='10px sans-serif'
+
+            context.textBaseline = "top"
+            for (let i = 0;i< chatIndex.length;i++){
+                text=getRandomChar()
+                x=i*10
+                y=chatIndex[i]*10
+                context.fillStyle = "rgba(181,181,255,1)"
+                context.fillRect(x,y,10,10)
+                context.fillStyle = "#4a4aff"
+                context.fillText(text,x,y)
+                if (y>canvas.height && Math.random()>0.99){
+                    chatIndex[i]=0
+                }else{
+                    chatIndex[i]++
+                }
+            }
+            setTimeout(draw,20)
+        }
+        window.onload=function(){
+            canvas=document.getElementById("BGWords")
+            canvas.height=window.innerHeight
+            canvas.width=window.innerWidth
+            chatIndex = new Array(Math.floor(window.innerWidth/10)).fill(0);
+            context=canvas.getContext("2d")
+            draw()
+        }
+        function watchWindowSize(){
+            canvas.height=window.innerHeight
+            canvas.width=window.innerWidth
+            chatIndex = new Array(Math.floor(window.innerWidth/10)).fill(0);
+        }
+        window.addEventListener("resize", watchWindowSize)
+    </script>
+</head>
+
+<body>
+    <header>
+        <div id="titleGroup">
+            <h1 id="title">思远的赞助页面</h1>
+        </div>
+    </header>
+    <canvas id="BGWords" height="150" width="1280"></canvas>
+
+    <div id="nav">
+        <ul>
+            <li><a href="/"><p>主页</p></a><div class="linkHoverBackGround"></div></li>
+            <li><a href="/blogs"><p>博客</p></a><div class="linkHoverBackGround"></div></li>
+            <li><a href="/contactInformation"><p>联系我们</p></a><div class="linkHoverBackGround"></div></li>
+            <li><a href="https://gitee.com/masud_gitee"><p>Gitee</p></a><div class="linkHoverBackGround"></div></li>
+            <li><a href="https://github.com/bsywqx"><p>Github</p></a><div class="linkHoverBackGround"></div></li>
+        </ul>
+<!--        <div id="navHoverBackground"></div>-->
+    </div>
+
+<!--    <div id="headPage" class="blog">-->
+<!--        <div id="startWordsBackground">-->
+<!--            <p id="startWords">思远提供多种赞助方式感谢您的赞助</p>-->
+<!--        </div>-->
+<!--    </div>-->
+    <div class="blog">
+        <div class="docs">
+            <div class="main">
+
+    <p>
+        <img src="wx.jpg" alt="" style="height: 430px">
+        <img src="zfb.jpg" alt="" style="height: 430px">
+        <img src="qq.jpg" alt="" style="height: 430px">
+    </p>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,200 @@
+@keyframes backgroundChane{
+    from{
+        background-color: #ffffff;
+    }to{
+        background-color: #c9c9ff;
+    }
+}
+@keyframes  headerChane{
+    from{
+        background-color: #ffffff;
+        width: 0;
+    }to{
+        width: 100%;
+        background-color: #9a9afd;
+    }
+}
+@keyframes  docsChane{
+    from{
+        background-color: #ffffff;
+    }to{
+        background-color: #b2b2fa;
+    }
+}
+@keyframes  mainChane{
+    from{
+        filter: opacity(0%);
+    }to{
+        filter: opacity(100%);
+    }
+}@keyframes  watermarkChane{
+    from{
+        filter: opacity(100%);
+    }to{
+        filter: opacity(10%);
+    }
+}@keyframes linkGroupChane{
+    0%{
+        filter: opacity(0%);
+    }60%{
+        filter: opacity(0%);
+    }
+    100%{
+        filter: opacity(100%);
+    }
+}@keyframes codeChane{
+    0%{
+        filter: opacity(0%);
+        width: 0%;
+    }60%{
+        filter: opacity(0%);
+        width: 0%;
+    }
+    100%{
+        filter: opacity(100%);
+        width: 90%;
+    }
+}
+body{
+    animation-name: backgroundChane;
+    animation-duration: 1s;
+    background-color: #c9c9ff;
+}
+header{
+    animation-name: headerChane;
+    animation-duration: 1s;
+    overflow: hidden;
+    z-index: 2;
+    position: fixed;
+    top: 10px;
+    border-radius: 30px;
+    height: 60px;
+    background-color: #9a9afd;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+#titleGroup{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#title{
+    color: #0000ff;
+    white-space: nowrap;
+}
+#linkGroup{
+    animation-name: linkGroupChane;
+    animation-duration: 1s;
+    position: absolute;
+    left: 85%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color:#c9c9ff
+}
+#toDocsMainPage,#toMainPage,#toContactInformation{
+    margin-top:5px;
+    margin-bottom:5px;
+    position: relative;
+    background-color: #ff4e4e;
+    height: 20px;
+    border-radius: 10px;
+    width: 70px;
+}
+.mainLink{
+    text-align: center;
+    width: 70px;
+    line-height: 20px;
+    position: absolute;
+    color:#c9c9ff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#docs{
+    animation-name: docsChane;
+    animation-duration: 1s;
+    overflow: hidden;
+    margin-top:110px;
+    margin-bottom:5px;
+    margin-left:10%;
+    margin-right:10%;
+    border-radius: 20px;
+    background-color: #b2b2fa;
+    position: relative;
+    padding: 20px;
+}
+#main{
+    animation-name: mainChane;
+    animation-duration: 1s;
+    position: relative;
+    z-index:1
+}
+#main p,#main ul,#main ol{
+    margin-left: 20px;
+}
+#watermark{
+    animation-name: watermarkChane;
+    animation-duration: 1s;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter:opacity(10%);
+    z-index:0
+}
+.code{
+    overflow: hidden;
+    animation-name: codeChane;
+    animation-duration: 1.5s;
+    background-color: rgba(255, 0, 0, 0.169);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}::-webkit-scrollbar {
+
+    width: 12px;
+
+    height: 12px;
+
+}
+
+::-webkit-scrollbar-track-piece {
+
+    background-color: transparent;
+
+    -webkit-border-radius: 6px;
+
+}
+
+::-webkit-scrollbar-thumb:vertical {
+
+    height: 12px;
+
+    background-color: #BDBDBD;
+
+    -webkit-border-radius: 6px;
+
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+
+    width: 12px;
+
+    background-color: #BDBDBD;
+
+    -webkit-border-radius: 6px;
+
+}
+
+::-webkit-scrollbar-thumb:vertical:hover,
+::-webkit-scrollbar-thumb:horizontal:hover {
+
+    background-color: #808080;
+
+}

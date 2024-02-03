@@ -1,0 +1,134 @@
+#nav:hover,#nav:focus,#nav:active{
+    width: 300px;
+    background-color: #ffb9b9;
+    border-radius: 20px;
+}
+#nav{
+    overflow: hidden;
+    position: fixed;
+    top: 20%;
+    width: 14px;
+    background-color: rgb(145, 255, 0);
+    background-image: linear-gradient( 135deg, #FCCF31 10%, #F55555 100%);
+    z-index: 100;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    font-size: 24px;
+    border-radius: 7px;
+}#nav li:hover,#nav li:focus,#nav li:active{
+    transform: scale(1.1);
+    background-color: #ffa5a5;
+}
+#nav:hover #navHoverBackground,#nav:focus #navHoverBackground,#nav:active #navHoverBackground{
+    opacity: 1;
+}
+#navHoverBackground{
+    background-image: linear-gradient( 135deg, #FF9D6C 10%, #e42d2d 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.34, 0.25, 0.23, 1.03);
+}
+#nav li:hover>a{
+    color:#3b3100
+}
+#nav li:hover>.linkHoverBackGround{
+    opacity: 1;
+}
+#nav .linkHoverBackGround{
+    background-image: linear-gradient( 135deg, #FFD26F 10%, #3677FF 100%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 0;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.34, 0.25, 0.23, 1.03);
+}
+#nav li{
+    position: relative;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    white-space: nowrap;
+    margin: 10px;
+    background-image: linear-gradient( 135deg, #FEB692 10%, #ff6868 100%);
+    padding: 10px;
+    border-radius: 20px;
+    list-style: none;
+    overflow: hidden;
+}#nav>ul{
+    padding: 20px;
+    z-index: 1;
+    position: relative;
+}
+#nav a{
+    position: relative;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    color: #0000ff;
+    text-decoration: none;
+    z-index: 1;
+}#nav p{
+    margin: 0;
+    text-align: center
+    
+}#nav li:hover #helpSonNav{
+    background-color: #ffa0a0;
+    height: 200px;
+    border-radius: 20px;
+}
+#helpSonNav{
+    margin-left: 20px;
+    z-index: 11;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    height: 8px;
+    border-radius: 6px;
+    margin-top: 10px;
+    background-color: rgb(145, 255, 0);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-left: 0;
+    
+}
+#helpSonNav li{
+    z-index: 2;
+}
+#helpSonNav ul{
+    z-index: 3;
+}
+#helpSonNav a{
+    color: #0000ff;
+    font-size: 16px;
+}#helpSonNav li:hover a{
+    color: #3b3100;
+}#helpSonNav ul{
+    padding: 0;
+    margin-left: 0;
+}#helpSonNav .linkHoverBackGround{
+    background-image: linear-gradient( 135deg, #EECE13 10%, #B210FF 100%);
+}
+#nav li li{
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    opacity:0;
+}#nav li:hover li{
+    opacity:1;
+}
+#helpSonNav::-webkit-scrollbar {
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    width: 0px;
+
+}#nav li:hover div::-webkit-scrollbar{
+    width: 12px;
+}
