@@ -20,7 +20,7 @@
             position: fixed;
             width:100%;
             height:100%;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 30% 30%,#32ffea30,#00000000 80px),
                 radial-gradient(circle at 70% 60%,#ffbf2830,#00000000 160px),
                 radial-gradient(circle at 20% 70%,#3da86630,#00000000 140px),
@@ -157,34 +157,30 @@
     <script src="https://tjy-gitnub.github.io/tapple/jq.min.js"></script>
     <div id="hello" class="card">
         <p style="font-size: 10vh;">你好!</p>
-        <p style="font-size: 7vh;">吃了没?</p>
         <p>Hello!</p>
     </div>
     <div id="box" class="card bg dn">
         <div id="lang">
             <p style="font-size: 9vh;">语言</p>
-            <p style="font-size: 6vh;">語言</p>
             <p>Language</p>
         </div>
         <div id="ing">
             <div>
-                <p style="font-size: 25px; margin-bottom: 10px;">语言 語言 Language</p>
+                <p style="font-size: 25px; margin-bottom: 10px;">语言 Language</p>
                 <div class="list sel" id="inp-lang">
-                    <a class="a" onclick="cl('zh');$(this).addClass('sel');">现代汉语/現代漢語</a>
+                    <a class="a" onclick="cl('zh');$(this).addClass('sel');">中文</a>
                     <a class="a" onclick="cl('en');$(this).addClass('sel');">English</a>
                 </div>
             </div>
             <div id="tyg" style="display: none;">
-                <p style="font-size: 25px; margin-bottom: 10px;" class="tit">字体 字體</p>
+                <p style="font-size: 25px; margin-bottom: 10px;" class="tit">字体</p>
                 <div class="list sel" id="inp-fm">
                     <a class="a" onclick="$('#inp-fm>.a').removeClass('sel');$(this).addClass('sel');fm='hans';
                 $('#sub').text('确定');">简体</a>
-                    <a class="a" onclick="$('#inp-fm>.a').removeClass('sel');$(this).addClass('sel');fm='hant';
-                $('#sub').text('確定');">繁體</a>
                 </div>
             </div>
             <div style="flex-grow: 1;display: flex;align-items: end;justify-content: end;">
-            <a class="a btn sub" id="sub" onclick="sub();">确定/確定/Submit</a></div>
+            <a class="a btn sub" id="sub" onclick="sub();">确定/Submit</a></div>
         </div>
     </div>
     <script>
@@ -194,7 +190,7 @@
             lang=x;
             if(x=='zh'){
                 $('#tyg').show();
-                $('#sub').text('确定/確定');
+                $('#sub').text('确定');
             }else if(x=='en'){
                 $('#tyg').hide();
                 $('#inp-fm>.a').removeClass('sel');
@@ -203,7 +199,7 @@
             }
         }
         function init() {
-            
+
             if (window.innerHeight>630) {
                 if(window.innerWidth<window.innerHeight){
                     $('#box').addClass('s');
