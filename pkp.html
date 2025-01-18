@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>地主游戏助手</title>
     <style>
+        .container {
+            background-color: white;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -13,15 +19,6 @@
             height: 100vh;
             margin: 0;
             background-color: #f4f4f9;
-        }
-        .container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 300px;
-            text-align: center;
         }
         button {
             width: 80%;
@@ -41,14 +38,23 @@
             margin-top: 20px;
             font-size: 1.5em;
         }
+        #totalResult {
+            font-size: 172px;
+            font-family: smt;
+        }
+        @font-face {
+            font-family: smt;
+            src: url('./DS-DIGIB-2.ttf') format('truetype'); /* 替换为你下载的字体文件路径 */
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>斗地主记录倍数</h1>
+        <div class="result" id="totalResult">02</div>
         <button onclick="newGame()">新的游戏</button>
         <button onclick="doubleMultiple()">倍数翻倍</button>
-        <div class="result" id="totalResult">当前倍数: 2</div>
+        <button onclick="renew()">重置</button>
         <div class="result" id="roundCount">局数: 0</div>
     </div>
 
@@ -58,14 +64,27 @@
 
         function doubleMultiple() {
             totalMultiple *= 2;
-            document.getElementById('totalResult').textContent = `当前倍数: ${totalMultiple}`;
+            if (totalMultiple === 4) {
+                totalMultiple = "04";
+            }
+            if (totalMultiple === 8) {
+                totalMultiple = "08";
+            }
+            document.getElementById('totalResult').textContent = ` ${totalMultiple}`;
         }
 
         function newGame() {
 
-            totalMultiple = 2;
+            totalMultiple = "02";
             roundCount++;
-            document.getElementById('totalResult').textContent = `当前倍数: ${totalMultiple}`;
+            document.getElementById('totalResult').textContent = ` ${totalMultiple}`;
+            document.getElementById('roundCount').textContent = `局数: ${roundCount}`;
+        }
+
+        function renew() {
+            totalMultiple = "02"
+            roundCount = 0
+            document.getElementById('totalResult').textContent = ` ${totalMultiple}`;
             document.getElementById('roundCount').textContent = `局数: ${roundCount}`;
         }
     </script>
