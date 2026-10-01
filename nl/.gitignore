@@ -1,0 +1,12 @@
+# 本地调试产物（以 _ 开头的都是临时文件）
+_*
+.edge-*/
+
+# Python
+__pycache__/
+*.pyc
+
+# 系统
+Thumbs.db
+.DS_Store
+desktop.ini

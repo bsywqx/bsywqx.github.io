@@ -1,0 +1,8 @@
+# 统一换行符，避免 Windows 上提交出 CRLF
+* text=auto eol=lf
+
+# 二进制资源别做行尾转换
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
